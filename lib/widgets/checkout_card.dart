@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:scra/theme.dart';
 
@@ -51,7 +50,7 @@ class CheckoutCard extends StatelessWidget {
                   height: 2,
                 ),
                 Text(
-                  '\$123,33',
+                  '\$133,31',
                   style: priceTextStyle,
                 ),
               ],
