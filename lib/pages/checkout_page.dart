@@ -150,12 +150,126 @@ class CheckoutPage extends StatelessWidget {
                         fontSize: 16,
                         fontWeight: medium,
                       ),
+                    ),
+                    const SizedBox(height: 12),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Producr Quantity',
+                          style: secondaryTextStyle.copyWith(
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          '2 Items',
+                          style: primaryTextStyle.copyWith(
+                            fontWeight: medium,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Producr price',
+                          style: secondaryTextStyle.copyWith(
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          '\$575,96',
+                          style: primaryTextStyle.copyWith(
+                            fontWeight: medium,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Shipping',
+                          style: secondaryTextStyle.copyWith(
+                            fontSize: 12,
+                          ),
+                        ),
+                        Text(
+                          'Free',
+                          style: primaryTextStyle.copyWith(
+                            fontWeight: medium,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    const Divider(
+                      thickness: 1,
+                      color: Color(0xff2E3141),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'Total',
+                          style: priceTextStyle.copyWith(
+                            fontWeight: semiBold,
+                          ),
+                        ),
+                        Text(
+                          '\$575.92',
+                          style: priceTextStyle.copyWith(
+                            fontWeight: semiBold,
+                          ),
+                        ),
+                      ],
                     )
                   ],
                 ),
-              )
+              ),
             ],
-          )
+          ),
+
+          // todo : CHECKOUT BUTTON
+          SizedBox(
+            height: defaultMargin,
+          ),
+          const Divider(
+            thickness: 1,
+            color: Color(0xff2E3141),
+          ),
+          Container(
+            height: 50,
+            width: double.infinity,
+            margin: EdgeInsets.symmetric(
+              vertical: defaultMargin,
+            ),
+            child: TextButton(
+              onPressed: () {
+                Navigator.pushNamedAndRemoveUntil(
+                    context, '/checkout-succes', (route) => false);
+              },
+              style: TextButton.styleFrom(
+                backgroundColor: primaryColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+              ),
+              child: Text(
+                'Checkout Now',
+                style: primaryTextStyle.copyWith(
+                  fontSize: 16,
+                  fontWeight: semiBold,
+                ),
+              ),
+            ),
+          ),
         ],
       );
     }

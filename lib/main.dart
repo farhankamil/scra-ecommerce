@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:scra/pages/cart_page.dart';
 import 'package:scra/pages/checkout_page.dart';
+import 'package:scra/pages/checkout_success_pages.dart';
 import 'package:scra/pages/detail_chat_page.dart';
 import 'package:scra/pages/home/edit_profile_page.dart';
 import 'package:scra/pages/home/main_page.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         '/product': (context) => const ProductPage(),
         '/cart': (context) => const CartPage(),
         '/checkout': (context) => const CheckoutPage(),
+        '/checkout-succes': (context) => const CheckoutSuccesPage(),
       },
     );
   }
