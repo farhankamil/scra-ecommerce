@@ -48,7 +48,7 @@ class CartCard extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      '\$123,98',
+                      '\$113,98',
                       style: priceTextStyle,
                     ),
                   ],
